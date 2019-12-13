@@ -12,16 +12,8 @@ app.use(bodyParser.json());
 app.use('/movies', require('./routes/movies'));
 app.use('/reviews', require('./routes/reviews'));
 
-// Static files for editor and display app
-// app.use('/', express.static('../frontend/editor/build/'));
-// app.get('/*', function(req, res) {
-//   res.sendFile(path.join(__dirname, '../frontend/editor/build/index.html'), function(err) {
-//     if (err) {
-//       res.status(500).send(err)
-//     }
-//   })
-// });
-
+// Static files for the frontend app
+app.use('/', express.static('../frontend/build/'));
 
 // Catch 404 Errors
 app.use((req, res, next) => {

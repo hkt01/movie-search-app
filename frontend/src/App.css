@@ -1,0 +1,12 @@
+.homeContainer h3 {
+  margin: 20px auto 10px auto;
+}
+
+.homeContainer form {
+  margin: 20px auto;
+}
+
+.searchRow input {
+  width: auto;
+  margin-right: 3px;
+}
