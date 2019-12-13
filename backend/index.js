@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 // REST API routes
 app.use('/movies', require('./routes/movies'));
-// app.use('/reviews', require('./routes/reviews'));
+app.use('/reviews', require('./routes/reviews'));
 
 // Static files for editor and display app
 // app.use('/', express.static('../frontend/editor/build/'));
