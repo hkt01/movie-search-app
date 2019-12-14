@@ -3,10 +3,13 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 8000;
 const dotenv = require('dotenv').config();
+const cors = require('cors');
+
 // const path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors({credentials: true, origin: true}));
 
 // REST API routes
 app.use('/movies', require('./routes/movies'));

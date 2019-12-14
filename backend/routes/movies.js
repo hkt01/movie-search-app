@@ -7,10 +7,13 @@ const moviesCtrl = new MoviesController();
 router.route('/')
   .get(moviesCtrl.getMovies);
 
+router.route('/:id')
+  .get(moviesCtrl.getMovieById);
+
 /**
  * Normally for a REST API this would also include routes:
  * POST /
- * GET, PUT, PATCH and DELETE /:id
+ * PUT, PATCH and DELETE /:id
  *
  */
 

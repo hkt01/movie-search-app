@@ -18,4 +18,15 @@ describe('/movies', function() {
         done();
       });
   });
+
+  it('should GET a movie by imdbID', function(done) {
+    chai.request(server)
+      .get('/movies/tt0816692')
+      .end(function(err, res) {
+        res.should.have.status(200);
+        res.should.be.json;
+        // res.body.should.be.a('array');
+        done();
+      });
+  });
 });
