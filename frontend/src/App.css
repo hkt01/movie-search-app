@@ -10,3 +10,40 @@
   width: auto;
   margin-right: 3px;
 }
+
+.block {
+  display: block;
+}
+
+.searchResults {
+  padding-bottom: 10px;
+}
+
+.movieRow:first-of-type, .reviewRow:first-of-type {
+  border-top: 1px solid #efefef;
+}
+
+.movieRow, .reviewRow {
+  padding: 20px 10px;
+  border-bottom: 1px solid #efefef;
+}
+
+.movieRow:hover {
+  padding: 18px 8px;
+  border: 2px solid #efefef;
+}
+
+.movieRow img {
+  max-width: 200px;
+}
+
+.reviewRow .author {
+  margin-right: 10px;
+}
+
+.movieContainer {
+  padding-top: 40px;
+}
+.movieContainer p {
+  margin: 15px 0;
+}

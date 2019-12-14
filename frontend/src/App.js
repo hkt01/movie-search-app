@@ -15,13 +15,13 @@ function App() {
   return (
     <Router>
       <header className="App-header text-center">
-        <h1 className="text-primary">
-          Movie Search App
-        </h1>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+          <a href="/" className="navbar-brand">Movie Search App</a>
+        </nav>
       </header>
 
       <Switch>
-        <Route path="/movie/:name" component={Movie} />
+        <Route path="/movie/:title" component={Movie} />
         <Route path="/" component={Home}/>
       </Switch>
 
