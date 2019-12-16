@@ -37,6 +37,10 @@
   max-width: 200px;
 }
 
+.reviewRow img {
+  max-width: 100%;
+}
+
 .reviewRow .author {
   margin-right: 10px;
 }

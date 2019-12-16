@@ -48,7 +48,8 @@ class MoviesController {
     request(requestSettings, function (error, response, body) {
       if (!error && response.statusCode == 200) {
         // Parse result and just return the search array
-        res.json(JSON.parse(body).Search);
+        const result = JSON.parse(body);
+        res.json((result.Search)?result.Search:[]);
       } else {
         console.log(error);
         console.log(response);

@@ -56,9 +56,12 @@ function Home() {
       </Row>
       { movies &&
         <div className="searchResults">
-          { movies.map((movie, index) => (
+          { movies.length > 0 ?
+            (movies.map((movie, index) => (
             <ResultItem movie={movie} key={index}/>
-          ))}
+          ))) :
+          (<Alert variant="warning">No movies found with that query! Maybe try something different?</Alert>)
+        }
         </div>
       }
 
