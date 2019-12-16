@@ -4,8 +4,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 const dotenv = require('dotenv').config();
 const cors = require('cors');
-
-// const path = require('path');
+const path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -17,6 +16,13 @@ app.use('/reviews', require('./routes/reviews'));
 
 // Static files for the frontend app
 app.use('/', express.static('../frontend/build/'));
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+});
 
 // Catch 404 Errors
 app.use((req, res, next) => {

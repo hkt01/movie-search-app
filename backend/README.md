@@ -11,7 +11,7 @@ Runs the app in the production mode.
 
 ### `npm run start-dev`
 
-Runs the app in the production mode using nodemon.
+Runs the app in the production mode using nodemon to watch for changes.
 
 The server will reload if you make edits.
 
