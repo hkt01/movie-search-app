@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -21,3 +22,20 @@ export default function Review(props) {
     </Row>
   );
 };
+
+Review.propTypes = {
+  review: PropTypes.shape({
+    headline: PropTypes.string,
+    byline: PropTypes.string,
+    summary_short: PropTypes.string,
+    publication_date: PropTypes.string,
+    multimedia: PropTypes.shape({
+      src: PropTypes.string,
+      type: PropTypes.string
+    }),
+    link: PropTypes.shape({
+      url: PropTypes.string,
+      suggested_link_text: PropTypes.string
+    })
+  })
+}

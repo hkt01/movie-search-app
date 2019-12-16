@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 import Row from 'react-bootstrap/Row';
@@ -19,3 +20,12 @@ export default function ResultItem(props) {
     </Row>
   );
 };
+
+ResultItem.propTypes = {
+  movie: PropTypes.shape({
+    Title: PropTypes.string,
+    Year: PropTypes.number,
+    imdbID: PropTypes.string,
+    Poster: PropTypes.string
+  })
+}

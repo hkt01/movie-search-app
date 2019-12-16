@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
 import { useHistory } from "react-router-dom";
 
 import Container from 'react-bootstrap/Container';
@@ -108,6 +109,13 @@ function Movie(props) {
 
     </Container>
   );
+}
+
+// URL parameters received as props
+Movie.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape
+  })
 }
 
 export default Movie;
